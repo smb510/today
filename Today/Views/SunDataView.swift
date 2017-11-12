@@ -16,16 +16,24 @@ class SunDataView : UIView {
     }
   }
   
+  var touchDown: CGPoint?
   
   override func draw(_ rect: CGRect) {
     let colors = SunData.getColors()
     let sizes = getHeights()!
     var origin = CGPoint(x: 0, y:0)
-    for i in 0...8 {
-      let path = UIBezierPath(rect: CGRect(origin: origin, size: sizes[i]))
+    for (i, size)in sizes.enumerated() {
+      let rect = CGRect(origin: origin, size: size)
+      let path = UIBezierPath(rect: rect)
       colors[i].setFill()
       path.fill()
-      origin.y += sizes[i].height
+      if touchDown != nil && rect.contains(touchDown!) {
+        UIColor.red.setStroke()
+        path.lineCapStyle = CGLineCap.butt
+        path.lineWidth = 4
+        path.stroke()
+      }
+      origin.y += size.height
     }
   }
   
@@ -36,6 +44,18 @@ class SunDataView : UIView {
     return Array(repeating:CGSize(width: self.frame.width, height: self.frame.height / 9), count:9)
   }
   
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    touchDown = touches.first?.preciseLocation(in: self)
+    self.setNeedsDisplay()
+  }
   
+  override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    touchDown = touches.first?.preciseLocation(in: self)
+    self.setNeedsDisplay()
+  }
   
+  override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    touchDown = nil
+    self.setNeedsDisplay()
+  }
 }

@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     date.text = dateFormatter.string(from: rightNow)
     dateFormatter.dateFormat = "MMM YYYY"
     dayHeader.text = dateFormatter.string(from: rightNow).uppercased()
-    appDelegate?.sunDataController?.downloadData(completionHandler: ({(sunData) in
+    appDelegate?.sunDataController?.fetchToday(completionHandler: ({(sunData) in
       DispatchQueue.main.sync {
        self.today.sunData = sunData
       }}))

@@ -86,12 +86,12 @@
 		C33DD67A1F97018E006C2DD6 /* Today */ = {
 			isa = PBXGroup;
 			children = (
-				C31A100A1FB80BDA00F98281 /* Utilities */,
 				C31A100D1FB81B4E00F98281 /* Views */,
 				C33DD67B1F97018E006C2DD6 /* AppDelegate.swift */,
 				C33DD67D1F97018E006C2DD6 /* ViewController.swift */,
 				C33DD6901F970439006C2DD6 /* SunDataController.swift */,
 				C3A39D9E1F9D28B1000291A1 /* LocationConfigurator.swift */,
+				C31A100A1FB80BDA00F98281 /* Utilities */,
 				C33DD67F1F97018E006C2DD6 /* Main.storyboard */,
 				C33DD6851F97018E006C2DD6 /* Assets.xcassets */,
 				C33DD6871F97018E006C2DD6 /* LaunchScreen.storyboard */,
