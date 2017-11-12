@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C31A10071FB8012300F98281 /* RulerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31A10061FB8012300F98281 /* RulerView.swift */; };
+		C31A100C1FB8167900F98281 /* SunData+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31A100B1FB8167900F98281 /* SunData+Helper.swift */; };
 		C332AE201FB7F5790081968B /* SunDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C332AE1F1FB7F5790081968B /* SunDataView.swift */; };
 		C33DD67C1F97018E006C2DD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33DD67B1F97018E006C2DD6 /* AppDelegate.swift */; };
 		C33DD67E1F97018E006C2DD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33DD67D1F97018E006C2DD6 /* ViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C31A10061FB8012300F98281 /* RulerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerView.swift; sourceTree = "<group>"; };
+		C31A100B1FB8167900F98281 /* SunData+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SunData+Helper.swift"; sourceTree = "<group>"; };
 		C332AE1F1FB7F5790081968B /* SunDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunDataView.swift; sourceTree = "<group>"; };
 		C33DD6781F97018E006C2DD6 /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33DD67B1F97018E006C2DD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C31A100A1FB80BDA00F98281 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C33DD6941F97218D006C2DD6 /* CGRect + CGSize.swift */,
+				C31A100B1FB8167900F98281 /* SunData+Helper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C31A100D1FB81B4E00F98281 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C31A10061FB8012300F98281 /* RulerView.swift */,
+				C332AE1F1FB7F5790081968B /* SunDataView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C33DD66F1F97018E006C2DD6 = {
 			isa = PBXGroup;
 			children = (
@@ -64,17 +86,17 @@
 		C33DD67A1F97018E006C2DD6 /* Today */ = {
 			isa = PBXGroup;
 			children = (
+				C31A100A1FB80BDA00F98281 /* Utilities */,
+				C31A100D1FB81B4E00F98281 /* Views */,
 				C33DD67B1F97018E006C2DD6 /* AppDelegate.swift */,
 				C33DD67D1F97018E006C2DD6 /* ViewController.swift */,
 				C33DD6901F970439006C2DD6 /* SunDataController.swift */,
-				C33DD6941F97218D006C2DD6 /* CGRect + CGSize.swift */,
 				C3A39D9E1F9D28B1000291A1 /* LocationConfigurator.swift */,
 				C33DD67F1F97018E006C2DD6 /* Main.storyboard */,
 				C33DD6851F97018E006C2DD6 /* Assets.xcassets */,
 				C33DD6871F97018E006C2DD6 /* LaunchScreen.storyboard */,
 				C33DD68A1F97018E006C2DD6 /* Info.plist */,
 				C33DD6821F97018E006C2DD6 /* Today.xcdatamodeld */,
-				C332AE1F1FB7F5790081968B /* SunDataView.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -158,6 +180,8 @@
 				C3A39D9F1F9D28B1000291A1 /* LocationConfigurator.swift in Sources */,
 				C33DD6911F970439006C2DD6 /* SunDataController.swift in Sources */,
 				C33DD67C1F97018E006C2DD6 /* AppDelegate.swift in Sources */,
+				C31A10071FB8012300F98281 /* RulerView.swift in Sources */,
+				C31A100C1FB8167900F98281 /* SunData+Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

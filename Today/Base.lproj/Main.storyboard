@@ -17,50 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="386" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TMo-De-BsL" userLabel="Astro End">
-                                <rect key="frame" x="0.0" y="440" width="386" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="usg-If-yQT" userLabel="Nautical End">
-                                <rect key="frame" x="0.0" y="380" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F7B-wQ-QSC" userLabel="Civil End">
-                                <rect key="frame" x="0.0" y="320" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RLF-wz-Jox" userLabel="Civil Start">
-                                <rect key="frame" x="0.0" y="200" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2KO-gY-MvW" userLabel="Daylight">
-                                <rect key="frame" x="0.0" y="260" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.37813585669444438" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vUQ-Ey-kto" userLabel="Astro Start">
-                                <rect key="frame" x="0.0" y="80" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fxZ-Y2-fe9" userLabel="Night Start">
-                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.24935233160621761" green="0.24935233160621761" blue="0.24935233160621761" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E3I-bc-TMP" userLabel="Nautical Start">
-                                <rect key="frame" x="0.0" y="140" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eLA-ju-Ki6" userLabel="Night End">
-                                <rect key="frame" x="0.0" y="496" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.2493523316" green="0.2493523316" blue="0.2493523316" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSq-03-Z9H" userLabel="Today View" customClass="SunDataView" customModule="Today" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="386" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBe-vf-Shg" userLabel="Day of Month">
                                 <rect key="frame" x="20" y="21" width="23" height="83"/>
@@ -80,42 +39,43 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f1R-Ye-CqV" userLabel="now">
-                                <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31i-9u-qNP" customClass="RulerView" customModule="Today" customModuleProvider="target">
+                                <rect key="frame" x="322" y="21" width="64" height="646"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="rcG-Yr-ygX"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9xT-YB-hfW" firstAttribute="leading" secondItem="NBe-vf-Shg" secondAttribute="leading" constant="2" id="2cv-R2-N5D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hSq-03-Z9H" secondAttribute="bottom" id="3Vd-W9-MGR"/>
+                            <constraint firstItem="31i-9u-qNP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="297" id="3vs-Kq-ArL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="31i-9u-qNP" secondAttribute="trailing" id="4px-Xw-YOE"/>
                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="NBe-vf-Shg" secondAttribute="trailing" constant="343" id="8vi-Dd-MSu"/>
+                            <constraint firstItem="31i-9u-qNP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="AdG-u9-nMv"/>
                             <constraint firstItem="9xT-YB-hfW" firstAttribute="top" secondItem="NBe-vf-Shg" secondAttribute="bottom" constant="4" id="KO6-0T-Dpt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="9xT-YB-hfW" secondAttribute="trailing" constant="167" id="PtW-UZ-iyn"/>
+                            <constraint firstItem="hSq-03-Z9H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dff-6p-Iaf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hSq-03-Z9H" secondAttribute="trailing" id="eM0-l8-1Fz"/>
                             <constraint firstItem="NBe-vf-Shg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="fFA-Sj-rQ4"/>
+                            <constraint firstItem="hSq-03-Z9H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="t3R-0d-CtM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="31i-9u-qNP" secondAttribute="bottom" id="ufU-e1-yNB"/>
                             <constraint firstItem="NBe-vf-Shg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="vyg-0l-7oP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <size key="freeformSize" width="386" height="667"/>
                     <connections>
-                        <outlet property="astroEnd" destination="TMo-De-BsL" id="iio-gj-Jep"/>
-                        <outlet property="astroStart" destination="vUQ-Ey-kto" id="Fep-p6-y4Z"/>
-                        <outlet property="civilEnd" destination="F7B-wQ-QSC" id="ukP-0B-lbZ"/>
-                        <outlet property="civilStart" destination="RLF-wz-Jox" id="nSY-Kg-n3R"/>
                         <outlet property="date" destination="NBe-vf-Shg" id="fJk-jd-n5z"/>
                         <outlet property="dayHeader" destination="9xT-YB-hfW" id="fhZ-yT-pEX"/>
-                        <outlet property="daylight" destination="2KO-gY-MvW" id="XEt-OS-AN1"/>
-                        <outlet property="nauticalEnd" destination="usg-If-yQT" id="mFf-aI-YjS"/>
-                        <outlet property="nauticalStart" destination="E3I-bc-TMP" id="ABs-yU-gGC"/>
-                        <outlet property="nightEnd" destination="eLA-ju-Ki6" id="d07-Ky-iPE"/>
-                        <outlet property="nightStart" destination="fxZ-Y2-fe9" id="61u-EV-TB1"/>
-                        <outlet property="now" destination="f1R-Ye-CqV" id="TFp-b9-0Bd"/>
+                        <outlet property="today" destination="hSq-03-Z9H" id="xby-es-c6O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+            <point key="canvasLocation" x="32" y="33.733133433283363"/>
         </scene>
     </scenes>
 </document>
