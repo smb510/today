@@ -90,7 +90,6 @@ class ViewController: UIViewController {
         self.nauticalEnd.frame = CGRect(x: 0, y: self.civilEnd.frame.maxY, size: self.getProportionalSize(duration: endNauticalSeconds))
         self.astroEnd.frame = CGRect(x: 0, y: self.nauticalEnd.frame.maxY, size: self.getProportionalSize(duration: endAstronomicalSeconds))
         self.nightEnd.frame = CGRect(x: 0, y: self.astroEnd.frame.maxY, width: self.totalWidth!, height: self.totalHeight! - self.astroEnd.frame.maxY)
-        
       })
     }
   }
