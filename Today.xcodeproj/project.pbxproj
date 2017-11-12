@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C332AE201FB7F5790081968B /* SunDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C332AE1F1FB7F5790081968B /* SunDataView.swift */; };
 		C33DD67C1F97018E006C2DD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33DD67B1F97018E006C2DD6 /* AppDelegate.swift */; };
 		C33DD67E1F97018E006C2DD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33DD67D1F97018E006C2DD6 /* ViewController.swift */; };
 		C33DD6811F97018E006C2DD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33DD67F1F97018E006C2DD6 /* Main.storyboard */; };
 		C33DD6841F97018E006C2DD6 /* Today.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C33DD6821F97018E006C2DD6 /* Today.xcdatamodeld */; };
 		C33DD6861F97018E006C2DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C33DD6851F97018E006C2DD6 /* Assets.xcassets */; };
 		C33DD6891F97018E006C2DD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33DD6871F97018E006C2DD6 /* LaunchScreen.storyboard */; };
+		C33DD6911F970439006C2DD6 /* SunDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33DD6901F970439006C2DD6 /* SunDataController.swift */; };
+		C33DD6951F97218D006C2DD6 /* CGRect + CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33DD6941F97218D006C2DD6 /* CGRect + CGSize.swift */; };
+		C3A39D9F1F9D28B1000291A1 /* LocationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A39D9E1F9D28B1000291A1 /* LocationConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C332AE1F1FB7F5790081968B /* SunDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunDataView.swift; sourceTree = "<group>"; };
 		C33DD6781F97018E006C2DD6 /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33DD67B1F97018E006C2DD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C33DD67D1F97018E006C2DD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		C33DD6851F97018E006C2DD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C33DD6881F97018E006C2DD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C33DD68A1F97018E006C2DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C33DD6901F970439006C2DD6 /* SunDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunDataController.swift; sourceTree = "<group>"; };
+		C33DD6941F97218D006C2DD6 /* CGRect + CGSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect + CGSize.swift"; sourceTree = "<group>"; };
+		C3A39D9E1F9D28B1000291A1 /* LocationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +66,15 @@
 			children = (
 				C33DD67B1F97018E006C2DD6 /* AppDelegate.swift */,
 				C33DD67D1F97018E006C2DD6 /* ViewController.swift */,
+				C33DD6901F970439006C2DD6 /* SunDataController.swift */,
+				C33DD6941F97218D006C2DD6 /* CGRect + CGSize.swift */,
+				C3A39D9E1F9D28B1000291A1 /* LocationConfigurator.swift */,
 				C33DD67F1F97018E006C2DD6 /* Main.storyboard */,
 				C33DD6851F97018E006C2DD6 /* Assets.xcassets */,
 				C33DD6871F97018E006C2DD6 /* LaunchScreen.storyboard */,
 				C33DD68A1F97018E006C2DD6 /* Info.plist */,
 				C33DD6821F97018E006C2DD6 /* Today.xcdatamodeld */,
+				C332AE1F1FB7F5790081968B /* SunDataView.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -139,8 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C33DD6951F97218D006C2DD6 /* CGRect + CGSize.swift in Sources */,
+				C332AE201FB7F5790081968B /* SunDataView.swift in Sources */,
 				C33DD6841F97018E006C2DD6 /* Today.xcdatamodeld in Sources */,
 				C33DD67E1F97018E006C2DD6 /* ViewController.swift in Sources */,
+				C3A39D9F1F9D28B1000291A1 /* LocationConfigurator.swift in Sources */,
+				C33DD6911F970439006C2DD6 /* SunDataController.swift in Sources */,
 				C33DD67C1F97018E006C2DD6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F4VF2VZ22M;
 				INFOPLIST_FILE = Today/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.scottiebiddle.Today;
@@ -293,6 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F4VF2VZ22M;
 				INFOPLIST_FILE = Today/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.scottiebiddle.Today;
