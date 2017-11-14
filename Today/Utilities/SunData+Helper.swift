@@ -21,6 +21,30 @@ extension SunData {
     return [NIGHT, ASTRO, NAUT, CIV, DAY, CIV, NAUT, ASTRO, NIGHT]
   }
   
+  func getIntervals() -> [Double] {
+    let today = self.date!
+    var intervals: [Double] = []
+    intervals.append(0)
+    intervals.append(self.astroTwilightBegin!.timeIntervalSince(today) / 86400)
+    intervals.append(self.nauticalTwilightBegin!.timeIntervalSince(today) / 86400)
+    intervals.append(self.civilTwilightBegin!.timeIntervalSince(today) / 86400)
+    intervals.append(self.sunrise!.timeIntervalSince(today) / 86400)
+    intervals.append(self.solarNoon!.timeIntervalSince(today) / 86400)
+    intervals.append(self.sunset!.timeIntervalSince(today) / 86400)
+    intervals.append(self.civilTwilightEnd!.timeIntervalSince(today) / 86400)
+    intervals.append(self.nauticalTwilightEnd!.timeIntervalSince(today) / 86400)
+    intervals.append(self.astroTwilightEnd!.timeIntervalSince(today) / 86400)
+    intervals.append(1.0)
+    return intervals
+  }
+  
+  func getTimesSorted() -> [Date?] {
+    return [self.date, self.astroTwilightBegin, self.nauticalTwilightBegin,
+            self.civilTwilightBegin, self.sunrise, self.solarNoon, self.sunset,
+            self.civilTwilightEnd, self.nauticalTwilightEnd, self.astroTwilightEnd]
+  }
+  
+  
   func getSizes(width: CGFloat, height: CGFloat) -> [CGSize] {
     let startNightSeconds = self.astroTwilightBegin!.timeIntervalSince(self.date!)
     let nightStartSize = getProportionalSize(width: width, height: height, duration: startNightSeconds)
@@ -39,7 +63,7 @@ extension SunData {
     let endAstronomicalSeconds = self.astroTwilightEnd!.timeIntervalSince(self.nauticalTwilightEnd!)
     let endAstronomicalSize = getProportionalSize(width: width, height: height, duration: endAstronomicalSeconds)
     var sizes =  [nightStartSize, astroStartSize, nauticalStartSize, civilStartSize,
-    daylightSize, endCivilSize, endNauticalSize, endAstronomicalSize]
+                  daylightSize, endCivilSize, endNauticalSize, endAstronomicalSize]
     let totalHeightSoFar = sizes.map { $0.height}.reduce(0, {$0 + $1})
     sizes.append(CGSize(width: width, height: height - totalHeightSoFar))
     return sizes

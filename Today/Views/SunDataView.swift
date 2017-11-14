@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 
 class SunDataView : UIView {
+  
   var sunData: SunData? {
     didSet{
       self.setNeedsDisplay()
     }
   }
   
-  var touchDown: CGPoint?
   
   override func draw(_ rect: CGRect) {
     let colors = SunData.getColors()
@@ -27,35 +27,24 @@ class SunDataView : UIView {
       let path = UIBezierPath(rect: rect)
       colors[i].setFill()
       path.fill()
-      if touchDown != nil && rect.contains(touchDown!) {
-        UIColor.red.setStroke()
-        path.lineCapStyle = CGLineCap.butt
-        path.lineWidth = 4
-        path.stroke()
-      }
       origin.y += size.height
     }
   }
   
+  func getGradients() -> CAGradientLayer? {
+    let intervals = sunData!.getIntervals()
+    let colors = SunData.getColors()
+    let gradient = CAGradientLayer()
+    gradient.frame = self.frame
+    gradient.colors = colors.map({$0.cgColor})
+    gradient.locations = intervals as [NSNumber]
+    return gradient
+  }
+  
   func getHeights() -> [CGSize]? {
     if sunData != nil {
-      return sunData?.getSizes(width: self.frame.width, height: self.frame.height)
+      return sunData!.getSizes(width: self.frame.width, height: self.frame.height)
     }
     return Array(repeating:CGSize(width: self.frame.width, height: self.frame.height / 9), count:9)
-  }
-  
-  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    touchDown = touches.first?.preciseLocation(in: self)
-    self.setNeedsDisplay()
-  }
-  
-  override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-    touchDown = touches.first?.preciseLocation(in: self)
-    self.setNeedsDisplay()
-  }
-  
-  override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-    touchDown = nil
-    self.setNeedsDisplay()
   }
 }

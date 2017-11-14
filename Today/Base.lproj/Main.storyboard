@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBe-vf-Shg" userLabel="Day of Month">
-                                <rect key="frame" x="20" y="21" width="23" height="83"/>
+                                <rect key="frame" x="20" y="64" width="23" height="83"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="83" id="bWX-iT-Yeq"/>
                                 </constraints>
@@ -31,12 +31,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xT-YB-hfW" userLabel="Date header">
-                                <rect key="frame" x="22" y="108" width="197" height="21"/>
+                                <rect key="frame" x="22" y="151" width="197" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="C6x-3O-rvd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xg-wm-fW7" userLabel="Next Transition">
+                                <rect key="frame" x="20" y="547" width="238" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6kJ-ii-AhS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31i-9u-qNP" customClass="RulerView" customModule="Today" customModuleProvider="target">
@@ -47,7 +56,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.2493523316" green="0.2493523316" blue="0.2493523316" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="9xT-YB-hfW" firstAttribute="leading" secondItem="NBe-vf-Shg" secondAttribute="leading" constant="2" id="2cv-R2-N5D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hSq-03-Z9H" secondAttribute="bottom" id="3Vd-W9-MGR"/>
@@ -57,12 +66,15 @@
                             <constraint firstItem="31i-9u-qNP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="AdG-u9-nMv"/>
                             <constraint firstItem="9xT-YB-hfW" firstAttribute="top" secondItem="NBe-vf-Shg" secondAttribute="bottom" constant="4" id="KO6-0T-Dpt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="9xT-YB-hfW" secondAttribute="trailing" constant="167" id="PtW-UZ-iyn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4xg-wm-fW7" secondAttribute="bottom" constant="70" id="Ryq-4w-7W8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="4xg-wm-fW7" secondAttribute="trailing" constant="128" id="bwa-hD-GjJ"/>
+                            <constraint firstItem="4xg-wm-fW7" firstAttribute="leading" secondItem="NBe-vf-Shg" secondAttribute="leading" id="dSs-Mt-tYW"/>
                             <constraint firstItem="hSq-03-Z9H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dff-6p-Iaf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hSq-03-Z9H" secondAttribute="trailing" id="eM0-l8-1Fz"/>
                             <constraint firstItem="NBe-vf-Shg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="fFA-Sj-rQ4"/>
                             <constraint firstItem="hSq-03-Z9H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="t3R-0d-CtM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="31i-9u-qNP" secondAttribute="bottom" id="ufU-e1-yNB"/>
-                            <constraint firstItem="NBe-vf-Shg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="vyg-0l-7oP"/>
+                            <constraint firstItem="NBe-vf-Shg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="vyg-0l-7oP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -70,6 +82,7 @@
                     <connections>
                         <outlet property="date" destination="NBe-vf-Shg" id="fJk-jd-n5z"/>
                         <outlet property="dayHeader" destination="9xT-YB-hfW" id="fhZ-yT-pEX"/>
+                        <outlet property="nextTransition" destination="4xg-wm-fW7" id="mix-5w-CRH"/>
                         <outlet property="today" destination="hSq-03-Z9H" id="xby-es-c6O"/>
                     </connections>
                 </viewController>

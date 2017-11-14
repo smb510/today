@@ -49,10 +49,14 @@ class SunDataController : NSObject, URLSessionDelegate {
       sunData.sunrise = formatter.date(from: results.sunrise)
       sunData.sunset = formatter.date(from: results.sunset)
       sunData.solarNoon = formatter.date(from: results.solar_noon)
-      
-      //        try moc.save()
-      completionHandler(sunData)
-      
+      do {
+      try moc.save()
+      DispatchQueue.main.async {
+        completionHandler(sunData)
+      }
+      } catch _ {
+        fatalError("Could not save in the moc.")
+      }
     }
     dataTask.resume()
   }
