@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBe-vf-Shg" userLabel="Day of Month">
-                                <rect key="frame" x="20" y="64" width="23" height="83"/>
+                                <rect key="frame" x="20" y="32" width="23" height="83"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="83" id="bWX-iT-Yeq"/>
                                 </constraints>
@@ -31,7 +31,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xT-YB-hfW" userLabel="Date header">
-                                <rect key="frame" x="22" y="151" width="197" height="21"/>
+                                <rect key="frame" x="22" y="119" width="197" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="C6x-3O-rvd"/>
                                 </constraints>
@@ -74,7 +74,7 @@
                             <constraint firstItem="NBe-vf-Shg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="fFA-Sj-rQ4"/>
                             <constraint firstItem="hSq-03-Z9H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="t3R-0d-CtM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="31i-9u-qNP" secondAttribute="bottom" id="ufU-e1-yNB"/>
-                            <constraint firstItem="NBe-vf-Shg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="vyg-0l-7oP"/>
+                            <constraint firstItem="NBe-vf-Shg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="vyg-0l-7oP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

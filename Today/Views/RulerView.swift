@@ -50,8 +50,8 @@ class RulerView : UIView {
     let components = Calendar.autoupdatingCurrent.dateComponents(in: TimeZone.current, from: rightNow)
     let seconds  = components.hour! * 3600 + components.minute! * 60
     let fractionOfDay = Double(seconds) / 86400
-    let origin = CGPoint(x: self.frame.width * 0.5, y: CGFloat(fractionOfDay) * self.frame.height)
-    let size = CGSize(width: self.frame.width * 0.5, height: TICK_HEIGHT)
+    let origin = CGPoint(x: 0, y: CGFloat(fractionOfDay) * self.frame.height)
+    let size = CGSize(width: self.frame.width, height: TICK_HEIGHT / 2)
     let path = UIBezierPath(roundedRect: CGRect(origin: origin, size: size), byRoundingCorners: .allCorners,
                             cornerRadii: CORNER_RADII)
     UIColor.red.setFill()
